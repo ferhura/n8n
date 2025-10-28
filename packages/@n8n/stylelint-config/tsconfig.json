@@ -11,7 +11,9 @@
 		"declaration": true,
 		"declarationMap": true,
 		"downlevelIteration": true,
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"lib": ["ES2015"],
+		"typeRoots": []
 	},
 	"include": ["src/**/*"],
 	"exclude": ["dist", "node_modules", "**/*.test.ts"]

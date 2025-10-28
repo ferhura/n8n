@@ -6,7 +6,9 @@
 		"outDir": "dist/esm",
 		"strict": true,
 		"skipLibCheck": true,
-		"esModuleInterop": true
+		"esModuleInterop": true,
+		"lib": ["ES2020"],
+		"typeRoots": []
 	},
 	"include": ["src"]
 }
