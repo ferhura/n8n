@@ -98,7 +98,8 @@ startTimer('package_build');
 echo(chalk.yellow('INFO: Running pnpm install and build...'));
 try {
 	const lockfileFlag = process.env.SKIP_LOCKFILE_CHECK === 'true' ? '--no-frozen-lockfile' : '--frozen-lockfile';
-	const installProcess = $`cd ${config.rootDir} && pnpm install ${lockfileFlag}`;
+	// Force rebuild of native modules for the current platform
+	const installProcess = $`cd ${config.rootDir} && pnpm install ${lockfileFlag} --force`;
 	installProcess.pipe(process.stdout);
 	await installProcess;
 
