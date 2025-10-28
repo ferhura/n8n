@@ -103,8 +103,7 @@ try {
 	installProcess.pipe(process.stdout);
 	await installProcess;
 
-	// Build all packages except @n8n/node-cli (dev tool not needed in production)
-	const buildProcess = $`cd ${config.rootDir} && pnpm turbo run build --filter=!@n8n/node-cli`;
+	const buildProcess = $`cd ${config.rootDir} && pnpm build`;
 	buildProcess.pipe(process.stdout);
 	await buildProcess;
 
